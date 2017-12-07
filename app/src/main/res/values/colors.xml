@@ -9,5 +9,10 @@
     <color name="theme">#FC5C64</color>
 
     <color name="colorControlNormal">@color/black</color>
+    <color name="body">#F6F6F6</color>
+    <color name="line">#DBDBDB</color>
+    <color name="base_hint_color">#808080</color>
+    <color name="text">#333333</color>
+    <color name="text_sub">#999999</color>
 
 </resources>
