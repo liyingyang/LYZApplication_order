@@ -20,7 +20,7 @@ public class MainActivity extends ToolbarActivity {
         super.onCreate(savedInstanceState);
         loadUI(R.layout.activity_main);
 
-        try {
+        /*try {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
                     .url("http://nanningdebug.ujuz.cn/api/UAgent/GetAgentAll")
@@ -43,6 +43,6 @@ public class MainActivity extends ToolbarActivity {
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

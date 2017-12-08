@@ -38,4 +38,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Navbar.Nav" parent="Widget.Design.BottomNavigationView">
+        <item name="colorPrimary">@color/theme</item>
+    </style>
+
 </resources>
