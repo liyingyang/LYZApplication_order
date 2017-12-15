@@ -44,11 +44,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/BaseActivityTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".module.user.LoginActivity"
@@ -56,7 +52,13 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".module.user.RegisterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

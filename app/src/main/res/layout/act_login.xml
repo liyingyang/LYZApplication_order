@@ -2,62 +2,67 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/base_padding"
-        android:paddingRight="@dimen/base_padding">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:hint="请输入用户名"
-            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingLeft="@dimen/base_padding"
-            android:textColor="@color/text"
-            android:textColorHint="@color/base_hint_color"
-            android:textSize="14sp" />
+            android:paddingRight="@dimen/base_padding">
 
-        <EditText
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_item_height"
+                android:hint="请输入用户名"
+                app:theme="@style/BaseEditTextStyle" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_item_height"
+                android:layout_marginTop="@dimen/base_margin"
+                android:hint="请输入密码"
+                app:theme="@style/BaseEditTextStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/base_padding"
+            android:layout_marginRight="@dimen/base_padding"
             android:layout_marginTop="@dimen/base_margin"
-            android:hint="请输入密码"
-            android:maxLines="1"
-            android:paddingLeft="@dimen/base_padding"
-            android:textColor="@color/text"
-            android:textColorHint="@color/base_hint_color"
-            android:textSize="14sp" />
+            android:orientation="horizontal">
 
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn"
+                android:maxLines="1"
+                android:text="登录"
+                android:textColor="@drawable/selector_pass_text_color"
+                android:textSize="16sp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/base_margin"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn"
+                android:maxLines="1"
+                android:text="注册"
+                android:textColor="@drawable/selector_pass_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/base_padding"
-        android:paddingRight="@dimen/base_padding">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:maxLines="1"
-            android:text="登录"
-            android:textColor="@color/text"
-            android:textSize="14sp" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:maxLines="1"
-            android:text="注册"
-            android:textColor="@color/text"
-            android:textSize="14sp" />
-    </LinearLayout>
-
 </LinearLayout>

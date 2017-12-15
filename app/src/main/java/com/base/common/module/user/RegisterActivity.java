@@ -14,5 +14,6 @@ public class RegisterActivity extends ToolbarActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadUI(R.layout.act_register);
+        setToolbarTitle("注册");
     }
 }

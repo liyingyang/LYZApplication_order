@@ -31,4 +31,14 @@
         <item name="colorPrimary">@color/theme</item>
     </style>
 
+    <style name="BaseEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/base_hint_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingLeft">@dimen/base_padding</item>
+        <item name="android:paddingTop">@dimen/base_edittext_padding</item>
+        <item name="android:paddingBottom">@dimen/base_edittext_padding</item>
+    </style>
+
 </resources>

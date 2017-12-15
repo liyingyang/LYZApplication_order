@@ -28,7 +28,7 @@ public class MainActivity extends ToolbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadUI(R.layout.activity_main);
-
+        setToolbarTitle("首页");
         /*try {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
