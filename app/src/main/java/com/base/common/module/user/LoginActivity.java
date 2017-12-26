@@ -17,7 +17,8 @@ public class LoginActivity extends ToolbarActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadUI(R.layout.act_login);
-        setToolbarTitle("登录");
+        setToolbarTileCenter("登录");
+        showBack(false);
         initWithUI();
     }
 
@@ -26,9 +27,10 @@ public class LoginActivity extends ToolbarActivity {
             Intent intent = new Intent();
             intent.setClass(LoginActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         });
 
-        findViewById(R.id.btn_register).setOnClickListener(view -> {
+        findViewById(R.id.txv_register).setOnClickListener(view -> {
             Intent intent = new Intent();
             intent.setClass(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);

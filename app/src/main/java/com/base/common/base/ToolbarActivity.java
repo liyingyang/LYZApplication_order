@@ -5,7 +5,9 @@ import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.animation.StateListAnimator;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,7 +18,10 @@ import android.support.v7.widget.ActionMenuView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.base.common.R;
 import com.base.common.util.StatusBarHelper;
@@ -99,6 +104,13 @@ public class ToolbarActivity extends BaseActivity {
 
     public void setToolbarTitle(int strId) {
         toolbar.setTitle(getString(strId));
+        refreshToolbar();
+    }
+
+    public void setToolbarTileCenter(String title) {
+        toolbar.setTitle("");
+        TextView txv_title = findViewById(R.id.txv_title);
+        txv_title.setText(title);
         refreshToolbar();
     }
 

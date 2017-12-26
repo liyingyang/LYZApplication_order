@@ -5,7 +5,10 @@
 
     <dimen name="base_margin">16dp</dimen>
     <dimen name="base_padding">16dp</dimen>
+    <dimen name="base_margin_x2">32dp</dimen>
+    <dimen name="base_padding_x2">32dp</dimen>
     <dimen name="base_edittext_padding">5dp</dimen>
     <dimen name="base_item_height">45dp</dimen>
+    <dimen name="base_line">1px</dimen>
 
 </resources>
