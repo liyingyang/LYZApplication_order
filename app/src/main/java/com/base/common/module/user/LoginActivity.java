@@ -3,9 +3,8 @@ package com.base.common.module.user;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 
-import com.base.common.MainActivity;
+import com.base.common.module.home.HomeActivity;
 import com.base.common.R;
 import com.base.common.base.ToolbarActivity;
 
@@ -25,7 +24,7 @@ public class LoginActivity extends ToolbarActivity {
     private void initWithUI() {
         findViewById(R.id.btn_login).setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(LoginActivity.this, MainActivity.class);
+            intent.setClass(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         });
@@ -33,6 +32,12 @@ public class LoginActivity extends ToolbarActivity {
         findViewById(R.id.txv_register).setOnClickListener(view -> {
             Intent intent = new Intent();
             intent.setClass(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.txv_forget).setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setClass(LoginActivity.this, ForgetPassWordActivity.class);
             startActivity(intent);
         });
     }

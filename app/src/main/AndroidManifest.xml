@@ -42,8 +42,12 @@
         android:supportsRtl="true"
         android:theme="@style/BaseAppTheme">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/BaseActivityTheme">
+            android:name=".module.home.HomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
 
         </activity>
         <activity
@@ -52,13 +56,14 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--注册-->
         <activity
             android:name=".module.user.RegisterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -66,6 +71,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!--修改个人信息-->
         <activity
             android:name=".module.user.ModifyUserInfoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -73,6 +79,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!--个人信息详情-->
         <activity
             android:name=".module.work.InfoDetailActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -80,6 +87,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!--个人信息列表-->
         <activity
             android:name=".module.work.InfoListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -87,8 +95,17 @@
             android:screenOrientation="portrait"
             android:theme="@style/BaseActivityTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!--上传信息-->
         <activity
             android:name=".module.work.UpLoadInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!--忘记密码-->
+        <activity
+            android:name=".module.user.ForgetPassWordActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"

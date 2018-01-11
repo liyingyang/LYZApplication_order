@@ -7,13 +7,13 @@ import com.base.common.R;
 import com.base.common.base.ToolbarActivity;
 
 /**
- * 注册
+ * 忘记密码
  */
-public class RegisterActivity extends ToolbarActivity {
+public class ForgetPassWordActivity extends ToolbarActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        loadUI(R.layout.act_register);
-        setToolbarTileCenter("注册");
+        loadUI(R.layout.act_forget_password);
+        setToolbarTileCenter("忘记密码");
     }
 }

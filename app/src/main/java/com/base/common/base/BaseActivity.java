@@ -9,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.base.common.R;
 import com.base.common.util.StatusBarHelper;
@@ -20,6 +21,7 @@ public class BaseActivity extends AppCompatActivity {
     public int pageSize = 20;
     public int pageNum = 1;
     private static final String LOG_TAG = "Error";
+    private long outTime;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -113,5 +115,14 @@ public class BaseActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return statusHeight;
+    }
+
+    public void exitApp() {
+        if ((System.currentTimeMillis() - outTime) > 2000) {
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_LONG).show();
+            outTime = System.currentTimeMillis();
+        } else {
+            System.exit(0);
+        }
     }
 }
